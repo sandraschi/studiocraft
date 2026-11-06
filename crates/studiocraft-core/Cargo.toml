@@ -1,0 +1,21 @@
+[package]
+name = "studiocraft-core"
+version = "0.2.0"
+edition = "2021"
+description = "L1 core for StudioCraft: shared .studiocraft project, adapter caps, handoff safety, skills, workflows, LLM chat"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+reqwest = { workspace = true }
+tokio = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+serde_json = { workspace = true }
+
+[lints]
+workspace = true
