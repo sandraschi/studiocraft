@@ -1,0 +1,1 @@
+dd698d0d5dc2e523fe4260f9d70f7a0df1877400ce4fbbf367cb1e751279fbcf  studiocraft-0.1.0-windows-x64-portable.zip
