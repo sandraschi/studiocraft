@@ -1,0 +1,81 @@
+{
+  "manifest_version": "0.2",
+  "name": "studiocraft",
+  "display_name": "StudioCraft",
+  "version": "__VERSION__",
+  "description": "L3 egui desktop host for StudioCraft (calls studiocraft-core in-process)",
+  "author": {
+    "name": "Sandra Schipal",
+    "url": "https://github.com/sandraschi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sandraschi/studiocraft"
+  },
+  "license": "MIT OR Apache-2.0",
+  "server": {
+    "type": "binary",
+    "entry_point": "studiocraft-cli.exe",
+    "mcp_config": {
+      "command": "${__dirname}/studiocraft-cli.exe",
+      "args": [
+        "mcp"
+      ]
+    }
+  },
+  "compatibility": {
+    "platforms": [
+      "win32"
+    ]
+  },
+  "tools": [
+    {
+      "name": "studio_status",
+      "description": "Report StudioCraft version, contract v1, engine probes (down when missing, never faked)."
+    },
+    {
+      "name": "studio_caps",
+      "description": "Show v1 adapter caps: photo<->vector editable, rest preview-linked, with provenance."
+    },
+    {
+      "name": "studio_init",
+      "description": "Create a new .studiocraft project dir with manifest v1 + native subdirs."
+    },
+    {
+      "name": "studio_open",
+      "description": "Open and validate an existing .studiocraft project (contract must be studiocraft/v1)."
+    },
+    {
+      "name": "studio_list",
+      "description": "Scan a root dir for .studiocraft projects (max 100 entries)."
+    },
+    {
+      "name": "studio_handoff_check",
+      "description": "Safety gate for one handoff: blocks unsaved/unsupported/non-editable instead of flattening."
+    },
+    {
+      "name": "studio_companion_attach",
+      "description": "Attach a companion pointer (design/pdf/word/deck/grid/effect/film/cad/sound). Pointer only, never copies bytes."
+    },
+    {
+      "name": "studio_composite_bump",
+      "description": "Bump manifest revision by 1 after a verified round-trip (checked_add, no silent reset)."
+    },
+    {
+      "name": "studio_skills",
+      "description": "List guided StudioCraft skills (round-trip, safe gate, companion, rescue, hygiene, chat recipe)."
+    },
+    {
+      "name": "studio_skill_show",
+      "description": "Show one skill recipe with steps and safety notes."
+    },
+    {
+      "name": "studio_llm_chat",
+      "description": "One LLM chat turn (ollama/lmstudio/openai/anthropic/custom). Keys via args or LLM_API_KEY env, never on disk."
+    },
+    {
+      "name": "studio_llm_models",
+      "description": "List models for a provider (Anthropic has none: type the model id)."
+    }
+  ]
+}
