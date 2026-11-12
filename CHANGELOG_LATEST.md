@@ -8,7 +8,9 @@ preserved both ways, nothing flattened. Pure-Rust ArtCraft, Windows x64.
 - `studiocraft.exe`: the desktop window (L3 egui host, in-process dispatch, no ports).
 - `studiocraft-cli.exe`: CLI and MCP stdio server (`studiocraft-cli mcp`).
 - `studiocraft-0.2.0-setup.exe`: per-user installer for both (no admin rights).
-- `studiocraft-0.2.0-windows-x64-portable.zip`: launcher-only extra (the same two exes).
+- `studiocraft-v0.2.0.mcpb`: MCP bundle for Claude Desktop, entry point `studiocraft-cli.exe mcp`.
+- `studiocraft-0.2.0-windows-x64-portable.zip`: launcher-only extra, with `studiocraft.exe`,
+  `studiocraft-cli.exe` and README in one folder.
 
 ## What is new
 
