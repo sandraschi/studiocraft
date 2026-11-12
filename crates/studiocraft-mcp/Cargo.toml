@@ -1,6 +1,6 @@
 [package]
 name = "studiocraft-mcp"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 description = "L2 CLI-first binary and MCP stdio server for StudioCraft"
 license = "MIT OR Apache-2.0"
