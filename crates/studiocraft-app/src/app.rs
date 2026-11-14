@@ -50,8 +50,15 @@ impl View {
 
 fn harsh_visuals() -> egui::Visuals {
     let mut v = egui::Visuals::dark();
+    let ink = egui::Color32::from_rgb(242, 246, 252);
+    v.override_text_color = Some(ink);
+    v.weak_text_color = Some(egui::Color32::from_rgb(203, 213, 225));
     v.panel_fill = egui::Color32::from_rgb(10, 13, 18);
     v.extreme_bg_color = egui::Color32::from_rgb(10, 13, 18);
+    v.widgets.noninteractive.fg_stroke = egui::Stroke::new(1.0, ink);
+    v.widgets.inactive.fg_stroke = egui::Stroke::new(1.0, ink);
+    v.widgets.hovered.fg_stroke = egui::Stroke::new(1.5, egui::Color32::WHITE);
+    v.widgets.active.fg_stroke = egui::Stroke::new(1.5, egui::Color32::WHITE);
     v.widgets.noninteractive.bg_stroke =
         egui::Stroke::new(1.0, egui::Color32::from_rgb(38, 54, 84));
     v.widgets.inactive.bg_stroke = egui::Stroke::new(1.0, egui::Color32::from_rgb(48, 66, 102));
