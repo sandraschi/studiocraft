@@ -5,12 +5,24 @@
 ![MCP stdio](https://img.shields.io/badge/MCP-stdio-purple)
 ![ArtCraft harness](https://img.shields.io/badge/ArtCraft-harness-green)
 
+## Install
+
+Tell Cursor, Claude, Antigravity, or OpenCode: **Install this.**
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts\install-craft.ps1
+```
+
+Installs the Windows app, the CLI, and the MCP bundle.
+
 **Shared project + universal canvas host (Pure-Rust ArtCraft, v0.2.0)**
 
-One `.studiocraft` project, natives preserved both ways. v0.2 is a real studio:
-7-view egui host (Projects / Handoff / Adapters / Chat / Skills / Help / Logs),
-12 MCP tools + CLI verbs over one `dispatch`, 6 guided skills, Fleet LLM card,
-contract + workflows + chat docs.
+One `.studiocraft` project, natives preserved both ways. The desktop host is a
+craft workstation: File, Edit, View, Insert, Modify, Commands, Window, Help;
+a Tasks sidebar for the six studio skills; a project stage with painting,
+vector, and composite lanes; and the five Help dialogs. 12 MCP tools + CLI
+verbs over one `dispatch`. PhotoCraft and VectorCraft edit the natives.
+StudioCraft checks the handoff and does not flatten.
 
 - Photo <-> Vector editable (native). Light = settings + LUT preview.
   Design/Pdf/Word/Deck/Grid/Effect/Film/Cad/Sound = companions (pointer JSON, v1).
@@ -31,7 +43,7 @@ cargo run -q -p studiocraft-mcp -- init --path D:/tmp/demo.studiocraft --name de
 cargo run -q -p studiocraft-mcp -- open --path D:/tmp/demo.studiocraft
 cargo run -q -p studiocraft-mcp -- handoff-check --project D:/tmp/demo.studiocraft --from photo --to vector
 cargo run -q -p studiocraft-mcp -- llm-models --provider ollama
-cargo run -q -p studiocraft-app -- --smoke
+cargo run -q -p studiocraft -- --smoke
 ```
 
 MCP stdio: `studiocraft-cli mcp` (`initialize` -> `tools/list` -> `tools/call`).
