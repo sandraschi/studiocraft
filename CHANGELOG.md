@@ -1,5 +1,9 @@
 # CHANGELOG - StudioCraft
 
+## [Unreleased]
+- Workstation shell: 8-menu bar, Tasks sidebar, project stage, and the five Help dialogs. Replaces the 7-tab page strip.
+- Revision bump runs only when both photo->vector and vector->photo handoff checks allow it.
+
 ## [0.2.0] - 2026-11-12
 - Real studio: 7-view L3 (Projects/Handoff/Adapters/Chat/Skills/Help/Logs), harsh dark visuals, Ctrl+Wheel zoom, glyph allowlist test.
 - 12 MCP tools + CLI verbs: + project_list, companion_attach, composite_bump, skills_list, skill_show, llm_chat, llm_models.
