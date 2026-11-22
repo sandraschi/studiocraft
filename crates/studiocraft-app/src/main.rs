@@ -42,9 +42,15 @@ fn main() {
         return;
     }
 
+    let native_options = eframe::NativeOptions {
+        viewport: eframe::egui::ViewportBuilder::default()
+            .with_inner_size([1280.0, 800.0])
+            .with_min_inner_size([960.0, 600.0]),
+        ..Default::default()
+    };
     let run = eframe::run_native(
         "StudioCraft",
-        eframe::NativeOptions::default(),
+        native_options,
         Box::new(
             |cc| -> Result<Box<dyn eframe::App>, Box<dyn std::error::Error + Send + Sync>> {
                 Ok(Box::new(StudioApp::new(cc)))
