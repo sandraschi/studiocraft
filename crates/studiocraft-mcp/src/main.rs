@@ -111,7 +111,7 @@ enum Commands {
     },
     /// List the MCP tool surface as JSON
     Tools,
-    /// Run the MCP 2024-11-05 stdio server
+    /// Run the MCP 2026-07-28 stdio server
     Mcp,
 }
 
@@ -435,7 +435,7 @@ fn merge_defaults(defaults: &Map<String, Value>, arguments: Value) -> Value {
 }
 
 fn run_mcp_stdio(defaults: &Map<String, Value>) {
-    eprintln!("[studiocraft-mcp] starting MCP stdio loop (2024-11-05)");
+    eprintln!("[studiocraft-mcp] starting MCP stdio loop (2026-07-28)");
     let stdin = std::io::stdin();
     let mut stdout = std::io::stdout();
 
@@ -462,7 +462,7 @@ fn run_mcp_stdio(defaults: &Map<String, Value>) {
                 "jsonrpc": "2.0",
                 "id": id,
                 "result": {
-                    "protocolVersion": "2024-11-05",
+                    "protocolVersion": "2026-07-28",
                     "capabilities": { "tools": { "listChanged": false } },
                     "serverInfo": { "name": APP_NAME, "version": APP_VERSION }
                 }

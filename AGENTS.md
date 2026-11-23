@@ -17,7 +17,7 @@ port-claiming standards do **not** apply here.
 | Crate | Tier | Contents |
 |---|---|---|
 | `crates/studiocraft-core` | L1 | `project.rs` (.studiocraft manifest v1), `adapters.rs` (caps registry), `handoff.rs` (safety gate), `dispatch` |
-| `crates/studiocraft-mcp` | L2 | `studiocraft-cli` - clap CLI + hand-rolled MCP 2024-11-05 stdio loop |
+| `crates/studiocraft-mcp` | L2 | `studiocraft-cli` - clap CLI + hand-rolled MCP 2026-07-28 stdio loop |
 | `crates/studiocraft-app` | L3 | `studiocraft-app` - eframe/egui host calling `dispatch` in-process, `--smoke` headless checks |
 
 There is an L3 app. It must never spawn `studiocraft-cli.exe`, never open a port,
