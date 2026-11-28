@@ -7,10 +7,12 @@
 
 **Shared project + universal canvas host (Pure-Rust ArtCraft, v0.2.0)**
 
-One `.studiocraft` project, natives preserved both ways. v0.2 is a real studio:
-7-view egui host (Projects / Handoff / Adapters / Chat / Skills / Help / Logs),
-12 MCP tools + CLI verbs over one `dispatch`, 6 guided skills, Fleet LLM card,
-contract + workflows + chat docs.
+One `.studiocraft` project, natives preserved both ways. The desktop host is a
+craft workstation: File, Edit, View, Insert, Modify, Commands, Window, Help;
+a Tasks sidebar for the six studio skills; a project stage with painting,
+vector, and composite lanes; and the five Help dialogs. 12 MCP tools + CLI
+verbs over one `dispatch`. PhotoCraft and VectorCraft edit the natives.
+StudioCraft checks the handoff and does not flatten.
 
 - Photo <-> Vector editable (native). Light = settings + LUT preview.
   Design/Pdf/Word/Deck/Grid/Effect/Film/Cad/Sound = companions (pointer JSON, v1).
@@ -18,6 +20,16 @@ contract + workflows + chat docs.
   reason. Never flattens. Revision is `checked_add` bump after verified trip.
 - Storytold engines stay official (`storytold-ref`). StudioCraft is `fleet-owned`.
   No forks. Never edit `D:\Dev\repos\_upstream\craft-launcher`.
+
+## Install
+
+Tell Claude, Cursor, Antigravity, or OpenCode: **Install studiocraft from github sandraschi.**
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts\install-craft.ps1
+```
+
+Installs the Windows app and the CLI (Start Menu shortcut, CLI on the user PATH). `-RegisterClients` also registers the MCP exe with the IDEs that are installed. `-Clients cursor,claude-desktop` limits that list. `-Mcpb` installs the Claude Desktop extension bundle.
 
 ## Quickstart
 
@@ -31,7 +43,7 @@ cargo run -q -p studiocraft-mcp -- init --path D:/tmp/demo.studiocraft --name de
 cargo run -q -p studiocraft-mcp -- open --path D:/tmp/demo.studiocraft
 cargo run -q -p studiocraft-mcp -- handoff-check --project D:/tmp/demo.studiocraft --from photo --to vector
 cargo run -q -p studiocraft-mcp -- llm-models --provider ollama
-cargo run -q -p studiocraft-app -- --smoke
+cargo run -q -p studiocraft -- --smoke
 ```
 
 MCP stdio: `studiocraft-cli mcp` (`initialize` -> `tools/list` -> `tools/call`).
